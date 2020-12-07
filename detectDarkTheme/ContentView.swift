@@ -7,8 +7,16 @@ struct Card: Identifiable {
     let icon: String
 }
 
+var cards = [
+    Card(title: "Notifications", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "bell.fill"),
+    Card(title: "Favourites", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "heart.fill"),
+    Card(title: "Dashboard", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "square.grid.2x2.fill"),
+    Card(title: "User", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "person.fill"),
+    Card(title: "Messages", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "message.fill"),
+    Card(title: "Economy", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "leaf.fill")
+]
+
 extension Color {
-    
     //light theme
     static let lightBackground = Color(red: 224/255, green: 229/255, blue: 236/255)
     static let lightShadow = Color(red: 255/255, green: 255/255, blue: 255/255) // opacity 0.5
@@ -21,17 +29,7 @@ extension Color {
     
     // Accent Colour
     static let AccentColour = Color(red: 49/255, green: 163/255, blue: 159/255)
-    
 }
-
-var cards = [
-    Card(title: "Notifications", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "bell.fill"),
-    Card(title: "Favourites", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "heart.fill"),
-    Card(title: "Dashboard", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "square.grid.2x2.fill"),
-    Card(title: "User", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "person.fill"),
-    Card(title: "Messages", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "message.fill"),
-    Card(title: "Economy", subTitle: "One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but", icon: "leaf.fill")
-]
 
 struct NeumorphicText: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
@@ -54,7 +52,6 @@ struct NeumorphicAccent: ViewModifier {
 struct NeumorphicLook: ViewModifier {
     
     @Environment(\.colorScheme) var colorScheme
-    
     func body(content: Content) -> some View {
         content
             .padding()
@@ -67,6 +64,7 @@ struct NeumorphicLook: ViewModifier {
 }
 
 extension View {
+    
     func neumorphicLook() -> some View {
         modifier(NeumorphicLook())
     }
@@ -81,9 +79,8 @@ extension View {
 }
 
 // textField
-
 struct NeumorphicStyleTextField: View {
-    @Environment(\.colorScheme) var colorScheme
+    
     var textField: TextField<Text>
     var imageName: String
     
@@ -102,7 +99,7 @@ struct NeumorphicStyleTextField: View {
 
 //Card
 struct CardView: View {
-    @Environment(\.colorScheme) var colorScheme
+   
     var title: String
     var subtitle: String
     var image: String
@@ -120,7 +117,6 @@ struct CardView: View {
             Text(subtitle).font(.subheadline)
                 .neumorphicText()
         }.neumorphicLook()
-        
     }
 }
 
@@ -130,10 +126,13 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            
             colorScheme == .light ? Color.lightBackground.ignoresSafeArea() : Color.textColor.ignoresSafeArea()
             ScrollView {
                 HStack {
-                    Button(action: {}){
+                    Button(action: {
+                        print(colorScheme)
+                    }){
                         Image(systemName: "line.horizontal.3.decrease").neumorphicAccent().neumorphicLook()
                     }
                     Spacer()
