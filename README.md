@@ -1,5 +1,5 @@
 
-<h1> Detect Light/Dark theme on SwiftUI </h1>
+<h1> Detect Light/Dark theme in SwiftUI </h1>
     
 ![alt text](https://i1.wp.com/thehappyprogrammer.com/wp-content/uploads/2020/12/themeDetector.png?w=1673&ssl=1?raw=true)
 
