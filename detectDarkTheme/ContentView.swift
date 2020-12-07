@@ -22,9 +22,22 @@ extension Color {
 }
 
 var cards = [
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
+    Card(title: "Title", subTitle: "Subtitle", icon: "heart"),
     Card(title: "Title", subTitle: "Subtitle", icon: "heart")
 ]
 
+
+// textField
+
+
+
+
+//Card
 
 
 struct ContentView: View {
