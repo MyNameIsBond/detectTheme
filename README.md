@@ -1,7 +1,7 @@
 
 <h1> Detect Light/Dark theme in SwiftUI </h1>
     
-![alt text](https://i1.wp.com/thehappyprogrammer.com/wp-content/uploads/2020/12/themeDetector.png?w=1673&ssl=1?raw=true)
+![alt text](https://i0.wp.com/thehappyprogrammer.com/wp-content/uploads/2020/12/DetectDarkTheme.jpg?resize=1536%2C941&ssl=1?raw=true)
 
 <p>in this tutorial I am going to be explaining how you can detect whether the theme is .light or .dark in SwiftUI. I will be demonstrating a neumorphic UI using the theme detector</p>
 <hr>
